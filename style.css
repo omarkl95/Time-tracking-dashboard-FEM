@@ -1,0 +1,302 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Code: */
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0E1323;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.time-tracking-container {
+    margin-top: calc(80rem/16);
+    margin-bottom: calc(80rem/16);
+    display: grid;
+    grid-template-rows: repeat(1fr, 7);
+    font-family: 'Rubik', sans-serif;
+    gap: calc(24rem/16);
+    max-width: 90%;
+}
+
+.report-profile {
+    border-radius: 15px;
+    background-color: #1C204B;
+}
+
+.main-profile-header {
+    background-color: #5747EA;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: calc(25rem/16);
+}
+
+.time-selection {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    color: #7078C9;
+    font-size: calc(18rem/16);
+}
+
+.time-selection p:hover {
+    cursor: pointer;
+}
+
+.profile-picture {
+    max-width: 3.5rem;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin-right: calc(20rem/16);
+}
+
+.report-for-title {
+    color: #BBC0FF;
+    font-size: calc(15rem/16);
+}
+
+.report-subject {
+    color: #FFFFFF;
+    font-weight: 100;
+    font-size: calc(24rem/16);
+}
+
+.category {
+    border-radius: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.category-main {
+    background-color: #1C204B;
+    border-radius: 15px;
+    position: relative;
+    padding: calc(28rem/16) calc(40rem/16);
+}
+
+.elipsis {
+    width: 1.5rem;
+    fill: #D8D8D8;
+}
+
+.category-header {
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    padding-top: calc(38rem/16);
+}
+
+.category-icon {
+    position: absolute;
+    top: 0;
+    opacity: 0.9;
+}
+
+.category.work {
+    background-color: #FF8B64;
+}
+
+.category.play {
+    background-color: #55C2E6;
+}
+
+.category.study {
+    background-color: #FF5E7D;
+}
+
+.category.exercise {
+    background-color: #4BCF82;
+}
+
+.category.social {
+    background-color: #7335D2;
+}
+
+.category.self-care {
+    background-color: #F1C75B;
+}
+
+.activity-type {
+    color: white;
+    font-size: calc(18rem/16);
+    font-weight: 400;
+}
+
+.activity-hours {
+    color: white;
+    font-size: calc(32rem/16);
+    font-weight: 100;
+}
+
+.category-top, .category-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-last {
+    color: #BBC0FF;
+    font-size: calc(15rem/16);
+}
+
+.time-selection .time-selected {
+    color: white;
+}
+
+@media (min-width: calc(1000rem/16)) {
+    .time-tracking-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .report-profile {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .main-profile-header {
+        padding-bottom: calc(80rem/16);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-picture {
+        margin-bottom: calc(31rem/16);
+    }
+
+    .report-subject {
+        font-size: calc(35rem/16);
+        max-width: calc(230rem/16);
+    }
+
+    .category-main {
+        padding: calc(42rem/16) calc(30rem/16);
+    }
+
+    .category-main:hover {
+        cursor: pointer;
+        background-color: #33397A;
+        transition: 0.5s;
+    }
+
+    .category-bottom {
+        margin-top: calc(25rem/16);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .time-selection {
+        padding-top: 1.3rem;
+        margin-left: calc(32rem/16);
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .time-selection p:hover {
+        cursor: pointer;
+        color: white;
+    }
+
+    .elipsis:hover {
+        cursor: pointer;
+        fill: white;
+    }
+
+    .category-header {
+        padding-top: calc(60rem/16);
+    }
+
+    .activity-hours {
+        font-size: calc(56rem/16);
+    }
+}
