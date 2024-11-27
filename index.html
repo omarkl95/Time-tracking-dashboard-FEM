@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h1 class="visually-hidden">Time Tracking Report Dashboard</h1>
+    <div class="time-tracking-container">
+      <div class="report-profile">
+        <div class="main-profile-header">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson Profile Picture" class="profile-picture">
+          <div class="report-for">
+            <p class="report-for-title">Report for</p>
+            <h2 class="report-subject">Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="time-selection">
+          <p id="daily-time" role="button" class="time-frame">Daily</p>
+          <p id="weekly-time" role="button" class="time-frame">Weekly</p>
+          <p id="monthly-time" role="button" class="time-frame ">Monthly</p>
+        </div>
+      </div>
+
+      <div class="category work">
+        <div class="category-header work">
+          <img src="images/icon-work.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main work">
+          <div class="category-top">
+            <h2 class="activity-type">Work</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Work">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category play">
+        <div class="category-header play">
+          <img src="images/icon-play.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main play">
+          <div class="category-top">
+            <h2 class="activity-type">Play</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Play">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category study">
+        <div class="category-header study">
+          <img src="images/icon-study.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main study">
+          <div class="category-top">
+            <h2 class="activity-type">Study</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Study">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category exercise">
+        <div class="category-header exercise">
+          <img src="images/icon-exercise.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main exercise">
+          <div class="category-top">
+            <h2 class="activity-type">Exercise</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Exercise">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category social">
+        <div class="category-header social">
+          <img src="images/icon-social.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main social">
+          <div class="category-top">
+            <h2 class="activity-type">Social</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Social">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category self-care">
+        <div class="category-header self-care">
+          <img src="images/icon-self-care.svg" alt="" class="category-icon">
+        </div>
+        <div class="category-main self-care">
+          <div class="category-top">
+            <h2 class="activity-type">Self Care</h2>
+            <svg class="elipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="category-bottom">
+            <h2 class="activity-hours" data-category="Self Care">0hrs</h2>
+            <p class="activity-last time-period" data-category="Self Care">Last Week - 0hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Omar Kamal</a>.
+  </div>
+  <script src="script.js" async></script>
+
+</body>
+
+</html>

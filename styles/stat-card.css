@@ -1,0 +1,68 @@
+.stat {
+    grid-area: var(--my-area);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-out;
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.stat:hover > .stat-info {
+    background-color: var(--bg-hover-stat);
+}
+
+.stat > .stat-bg {
+    overflow: hidden;
+    border-radius: 1.5rem 1.5rem 0 0;
+    position: relative;
+    height: 3.8rem;
+}
+
+.stat > .stat-bg img {
+    position: absolute;
+    width: 7.8rem;
+    right: 1.742rem;
+    top: -1.091rem;
+}
+
+.stat > .stat-info {
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 2.8rem 2.4rem;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: background-color 0.5s ease-out;
+}
+
+.stat > .stat-info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat > .stat-info > .header > img {
+    cursor: pointer;
+}
+
+/* tablet-breakpoint */
+@media (min-width: 37.5rem) {
+    .stat>.stat-bg {
+        height: 4.5rem;
+    }
+
+    .stat>.stat-info {
+        padding: 3.2rem 3rem;
+        gap: 2.4rem;
+    }
+
+    .stat > .stat-info > .content {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.8rem;
+    }
+}
